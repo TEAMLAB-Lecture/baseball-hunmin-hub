@@ -33,7 +33,6 @@ def is_digit(user_input_number):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     result=True
     num_target=('0','1','2','3','4','5','6','7','8','9')
-    if user_input_number[0]=='0' : return False
     for x in user_input_number :
         if x not in num_target :
             result=False
@@ -93,7 +92,8 @@ def is_duplicated_number(three_digit):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    A,B,C=three_digit
+    if len(three_digit)>3 : return True
+    A, B, C=three_digit
     if A==B or B==C or A==C :
         result=True
     else :
