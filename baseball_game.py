@@ -231,7 +231,7 @@ def is_yes(one_more_input):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     one_more_input=one_more_input.lower()
     result = True
-    if one_more_input != "yes" and one_more_input != "y" :
+    if one_more_input != 'yes' and one_more_input != 'y' :
         result=False
     # ==================================
     return result
