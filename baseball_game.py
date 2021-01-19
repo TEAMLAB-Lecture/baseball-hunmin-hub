@@ -274,7 +274,7 @@ def is_no(one_more_input):
 
 def main():
     print("Play Baseball")
-    for _ in range(0,20) :
+    for _ in range(0,2000) :
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         # ===Modify codes below=============
