@@ -295,7 +295,7 @@ def main():
         if score[0]==3 :
             while True :
                 one_more_game = input('You win, one more (Y/N) ?')
-                if is_no(one_more_game) :
+                if is_no(one_more_game) or one_more_game=='0' :
                     print("Thank you for using this program")
                     print("End of the Game")
                     return
