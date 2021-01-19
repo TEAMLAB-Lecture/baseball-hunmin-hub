@@ -285,7 +285,7 @@ def main():
                 print("Thank you for using this program")
                 print("End of the Game")
                 return
-            if is_digit(user_input) and is_validated_number(user_input):
+            if is_validated_number(user_input):
                 break
             print('Wrong Input, Input again')
         score=get_strikes_or_ball(user_input, random_number)
