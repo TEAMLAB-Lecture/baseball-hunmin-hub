@@ -288,16 +288,18 @@ def main():
             if is_validated_number(user_input):
                 break
             print('Wrong Input, Input again')
+
         score=get_strikes_or_ball(user_input, random_number)
         print(f"Strikes : {score[0]} , Balls : {score[1]}")
+
         if score[0]==3 :
             while True :
                 one_more_game = input('You win, one more (Y/N) ?')
-                if is_yes(one_more_game) or one_more_game=='0' :
+                if is_no(one_more_game) or one_more_game=='0' :
                     print("Thank you for using this program")
                     print("End of the Game")
                     return
-                elif is_no(one_more_game) :
+                elif is_yes(one_more_game) :
                     break
                 else :
                     print('Wrong Input, Input again')
