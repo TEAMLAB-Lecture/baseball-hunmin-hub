@@ -274,7 +274,8 @@ def is_no(one_more_input):
 
 def main():
     print("Play Baseball")
-    for _ in range(0,4000) :
+    while True :
+        flag = True
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
         # ===Modify codes below=============
@@ -282,13 +283,13 @@ def main():
         while True :
             user_input = input('Input guess number : ')
             if user_input == '0' :
-                print("Thank you for using this program")
-                print("End of the Game")
-                return
+                flag=False
+                break
             if is_validated_number(user_input):
                 break
             print('Wrong Input, Input again')
-
+        if flag==False :
+            break
         score=get_strikes_or_ball(user_input, random_number)
         print(f"Strikes : {score[0]} , Balls : {score[1]}")
 
@@ -296,13 +297,14 @@ def main():
             while True :
                 one_more_game = input('You win, one more (Y/N) ?')
                 if is_no(one_more_game) or one_more_game=='0' :
-                    print("Thank you for using this program")
-                    print("End of the Game")
-                    return
+                    flag=False
+                    break
                 elif is_yes(one_more_game) :
                     break
                 else :
                     print('Wrong Input, Input again')
+        if flag==False :
+            break
         # ==================================
     print("Thank you for using this program")
     print("End of the Game")
