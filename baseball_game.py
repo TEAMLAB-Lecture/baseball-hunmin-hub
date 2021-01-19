@@ -190,11 +190,11 @@ def get_strikes_or_ball(user_input_number, random_number):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     strikes=0
     ball=0
-    for i in range(3):
+    for i in range(0, 3):
         if user_input_number[i]==random_number[i] :
             strikes+=1
         else :
-            for j in range(3) :
+            for j in range(0, 3) :
                 if i==j : continue
                 if user_input_number[i]==random_number[j] :
                     ball+=1
