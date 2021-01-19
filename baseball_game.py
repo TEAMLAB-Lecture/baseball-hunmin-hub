@@ -199,7 +199,7 @@ def get_strikes_or_ball(user_input_number, random_number):
                 if user_input_number[i]==random_number[j] :
                     ball+=1
                     break
-    result = [strikes,ball]
+    result = [strikes, ball]
     # ==================================
     return result
 
